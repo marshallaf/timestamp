@@ -3,10 +3,10 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hey you! Send me a date and I\'ll give you the timestamp!');
-});
+// serve index.html on no route
+app.use(express.static(__dirname));
 
+// otherwise, collect date and try to parse it
 app.get('/:date', (req, res) => {
     let validDate = true;
     const date = new Date();
@@ -34,7 +34,6 @@ app.get('/:date', (req, res) => {
         dateObj.natural = null;
     }
     res.send(dateObj);
-    
 });
 
 app.listen(8080, function () {

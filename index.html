@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Timestamp API</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="root">
+    <div class="title">Timestamp API</div>
+    <div class="abstract">
+      <p>A simple API to retrieve the requested date in <a href="https://en.wikipedia.org/wiki/Unix_time">Unix time</a> and natural English.</p>
+      <p>
+        To use, append the desired date, in either Unix or natural format, after the base url. The response will be a JSON string containing the requested date in both Unix and natural format.
+      </p>
+    </div>
+    <div class="example-container">
+      <div class="title">example usage</div>
+      <div class="example-codebox">
+        <span class="comment">// request</span><br />
+        <span class="url">https://[base-url].com/145882384</span><br />
+        <span class="url">https://[base-url].com/August%2016,%201974</span><br /><br />
+        <span class="comment">// response</span><br />
+        {
+          <div class="code-indent">
+            <span class="bold">unix:</span> <span class="number">145882384</span><span class="bold">,</span><br />
+            <span class="bold">natural:</span> <span class="string">"August 16, 1974"</span>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="attribution">
+    Created by Andrew Marshall with <a href="http://expressjs.com/">Express.js</a>. <a href="https://www.github.com/marshallaf">See it on Github!</a></div>
+  </div>
+</body>
+</html>
